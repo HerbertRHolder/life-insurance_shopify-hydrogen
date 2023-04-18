@@ -1,0 +1,173 @@
+@import url("https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700;800;900&family=Open+Sans:ital,wght@0,300;0,400;0,500;1,300;1,400&display=swap");
+:root {
+  --header-width:90%;
+  --header-height:35px;
+  --header-color:#000;
+}
+
+.prime-bg {
+  background-color: #fcb900;
+}
+
+.cinzel-font {
+  font-family: "Cinzel", serif;
+}
+
+.opensans-font {
+  font-family: "Open Sans", sans-serif;
+}
+
+.form-control {
+  border: none !important;
+  border-bottom: 1px solid #dedede !important;
+  border-radius: 0rem !important;
+}
+
+.form-control:focus {
+  color: var(--bs-body-color);
+  background-color: var(--bs-body-bg);
+  border-color: transparent !important;
+  outline: 0;
+  box-shadow: none !important;
+  border-bottom: 1px solid #dedede !important;
+}
+
+body {
+  background-color: #fff;
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+body main {
+  position: relative;
+  width: 100%;
+  min-height: 500px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex: 1;
+  gap: 1rem;
+}
+
+.vid {
+  position: absolute;
+  top: 3vw;
+  z-index: -1;
+}
+
+.banner {
+  width: 100%;
+  height: 25px;
+  background-color: #fff;
+  text-align: center;
+  border-bottom: 1px solid #dedede;
+  color: #000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+header {
+  width: 100%;
+  height: var(--header-height);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.5s ease;
+}
+header .header-interior {
+  padding: 0rem 1rem;
+  width: var(--header-width);
+  height: 100%;
+  display: flex;
+  background-color: transparent;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 3;
+}
+header .header-interior figure {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  color: var(--header-color);
+}
+header .header-interior ul {
+  width: fit-content;
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  height: 1rem;
+}
+header .header-interior ul li {
+  color: var(--header-color);
+}
+header .header-interior menu {
+  display: none;
+}
+header .header-interior menu .streak {
+  width: 80%;
+  height: 3px;
+  background-color: #000;
+}
+
+.card-top_absolute {
+  position: absolute;
+  top: 3vw;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 33%;
+  min-height: 90px;
+  background-color: #fff;
+  z-index: 10;
+  border-radius: 0.5rem;
+  padding: 1rem;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
+}
+
+.full-section {
+  position: relative;
+  width: 100%;
+  height: 700px;
+  display: flex;
+}
+
+.half-section {
+  width: 50%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.footer {
+  width: 100%;
+  height: 500px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.footer div {
+  width: var(--header-width);
+  height: 80%;
+  display: flex;
+}
+
+.dol {
+  outline: dashed red 1px;
+}
+
+.red {
+  background-color: red;
+}
+
+.blue {
+  background-color: blue;
+}
+
+/*# sourceMappingURL=app.css.map */

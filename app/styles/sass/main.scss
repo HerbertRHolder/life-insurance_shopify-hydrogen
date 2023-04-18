@@ -1,0 +1,24 @@
+@use 'config/config';
+@use 'components/form';
+@use 'base/base';
+@use 'components/header';
+@use 'components/cards';
+@use 'components/offcanvas';
+@use 'components/containers';
+@use 'components/hero';
+@use 'components/collection';
+@use 'components/product';
+@use 'components/footer';
+@use 'components/breakpoint';
+
+.dol {
+    outline: dashed red 1px;
+}
+
+.red {
+    background-color: red;
+}
+.blue 
+{
+    background-color: blue;
+}
