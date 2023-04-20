@@ -7,15 +7,17 @@ import {
 } from '@remix-run/react';
 import {Seo} from '@shopify/hydrogen';
 import Header from './components/Header';
-import EmailForm from './components/form';
-import CardTop from './components/cards';
+// import EmailForm from './components/form';
+// import {CardColumn} from './components/cards';
 import Hero from './components/Hero';
+import TwoColumnSection from './components/TwoColumnSection';
 import Footer from './components/footer';
 
 import reset from './styles/reset.css';
 import styles from './styles/app.css';
 import favicon from '../public/favicon.svg';
 import bootstrap from './styles/bootstrap-5.3.0-alpha3-dist/css/bootstrap.min.css';
+
 export const links = () => {
   return [
     {rel: 'stylesheet', href: bootstrap},
@@ -56,12 +58,11 @@ export default function App() {
         <Links />
       </head>
       <body>
-        <Header ShopName="Life Insurance"></Header>
+        <Header ShopName={name}></Header>
         <main className="">
-          <CardTop>
-            <EmailForm />
-          </CardTop>
-          <Hero />
+          <Hero>
+            <TwoColumnSection></TwoColumnSection>
+          </Hero>
         </main>
         <ScrollRestoration />
         <Footer ShopName={name} />

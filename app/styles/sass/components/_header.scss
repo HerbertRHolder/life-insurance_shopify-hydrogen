@@ -8,6 +8,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    
 }
 
 header {
@@ -17,9 +18,9 @@ header {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    border-bottom: calc(1px/2) #d3d3d3 solid;
     // border-top: 1px solid transparent;
     transition: all .5s ease;
-
     .header-interior {
         padding: 0rem 1rem;
         width: var(--header-width);

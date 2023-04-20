@@ -1,20 +1,16 @@
 export default function EmailForm() {
   return (
-    <form className="w-100 d-flex flex-column align-items-center">
-      <label htmlFor="email" className="form-label opensans-font">
-        Subscribe for new offers!
-      </label>
-      <div className="w-100 d-flex justify-content-center gap-2">
-        <input
-          type="email"
-          className="form-control w-50 opensans-font"
-          name="email"
-          placeholder="Johnsmith@life.com"
-        />
-        <button type="sumbit" className="btn btn-primary opensans-font fs-6">
-          Subscribe
-        </button>
-      </div>
-    </form>
+    <div className="form-box">
+      <form className="form">
+        <span className="title">Sign up</span>
+        <span className="subtitle">Create a free account with your email.</span>
+        <div className="form-container">
+          <input type="text" className="input" placeholder="Full Name" />
+          <input type="email" className="input" placeholder="Email" />
+          <input type="password" className="input" placeholder="Password" />
+        </div>
+        <button type="submit">Sign up</button>
+      </form>
+    </div>
   );
 }

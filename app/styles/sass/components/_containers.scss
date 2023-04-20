@@ -1,14 +1,56 @@
 .full-section {
     position: relative;
     width: 100%;
-    height: 700px;
+    min-height: 550px;
     display: flex;
+}
+main {
+    justify-content: start !important;
+    align-items: flex-start !important;
 }
 .half-section {
     width: 50%;
     height: 100%;
     display: flex;
     flex-direction: column;
+    justify-content: start;
+    align-items: center;
+}
+.half-section {
+    justify-content: start;
+    align-items: flex-start;
+}
+.align-container {
+    width: 100%;
+    height: 400px;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+}
+
+.btn-container {
+    width: 100%;
+    height: 3rem;
+    display: flex;
+    // flex-direction: column;
     justify-content: center;
     align-items: center;
 }
+.center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.info-column {
+    width: 75%;
+}
+.center-col{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+
+

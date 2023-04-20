@@ -5,21 +5,49 @@
 // Extra 	    ≥1200px
 // Extra	    ≥1400px
 
-@media screen and (max-width:576px) {
-    
-}
-@media screen and (min-width:576px) {
-    
-}
+@media screen and (max-width:576px) {}
+
+@media screen and (min-width:576px) {}
+
 @media screen and (max-width: 768px) {
-    
+   
+    .full-section {
+        flex-direction: column;
+        .half-section {
+            width: 100%;
+            .btn-container{
+                margin-top: 3rem;
+            }
+        }
+    }
+    .center-md {
+        justify-content: center;
+        align-items: center !important;
+    }
+    .text-margin {
+        margin-left: 0;
+        text-align: center;
+    }
 }
+
 @media screen and (max-width: 992px) {
-    
+    .text-margin {
+        margin-left: 2rem;
+    }
 }
+@media screen and (max-width: 1000px) {
+    .text-margin {
+        margin-left: 0.3rem !important;
+    }
+}
+
 @media screen and (max-width: 1200px) {
-    
+    .info-column {
+        width: 90%;
+    }
+    .text-margin {
+        margin-left: 3rem;
+    }
 }
-@media screen and (max-width: 1400px) {
-    
-}
+
+@media screen and (max-width: 1400px) {}

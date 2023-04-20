@@ -6,3 +6,5 @@ node_modules
 /public/build
 /.mf
 .env
+notes.txt
+UI.html
