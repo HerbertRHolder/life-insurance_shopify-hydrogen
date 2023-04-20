@@ -392,13 +392,6 @@ main {
   width: 75%;
 }
 
-.center-col {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
-
 .hero-title {
   width: 650px;
   height: fit-content;
