@@ -2,8 +2,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@500;600;700&display=swap');
 :root {
-    --header-width:90%;
-    --header-height:35px;
+    --header-width:100%;
+    --header-height:50px;
     --header-color:#000;
 }
 .prime-bg {
@@ -24,6 +24,26 @@
 .text-margin {
     margin-left: 7rem;
 }
+.text-margin-right {
+    margin-right: 10rem;
+}
 .text-margin-top {
     margin-top: 7rem;
+}
+.half {
+    width: 50%;
+}
+.center {
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+}
+.center-col{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.navigate-styling {
+    margin-left: 7rem;
 }

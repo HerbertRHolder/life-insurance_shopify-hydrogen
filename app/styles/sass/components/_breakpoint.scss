@@ -10,23 +10,36 @@
 @media screen and (min-width:576px) {}
 
 @media screen and (max-width: 768px) {
-   
+
     .full-section {
         flex-direction: column;
+
         .half-section {
             width: 100%;
-            .btn-container{
+
+            .btn-container {
                 margin-top: 3rem;
             }
         }
     }
+
     .center-md {
-        justify-content: center;
+        justify-content: start;
+        padding-top: 2rem;
         align-items: center !important;
     }
+
     .text-margin {
         margin-left: 0;
         text-align: center;
+    }
+
+    .btn-container {
+        justify-content: center;
+    }
+
+    header .header-interior nav {
+        display: none !important;
     }
 }
 
@@ -35,6 +48,7 @@
         margin-left: 2rem;
     }
 }
+
 @media screen and (max-width: 1000px) {
     .text-margin {
         margin-left: 0.3rem !important;
@@ -45,6 +59,7 @@
     .info-column {
         width: 90%;
     }
+
     .text-margin {
         margin-left: 3rem;
     }

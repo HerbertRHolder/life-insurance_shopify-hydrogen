@@ -34,22 +34,11 @@ main {
     height: 3rem;
     display: flex;
     // flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
-.center {
-    display: flex;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: center;
 }
 .info-column {
     width: 75%;
-}
-.center-col{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
 }
 
 

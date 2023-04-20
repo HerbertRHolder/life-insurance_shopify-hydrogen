@@ -1,6 +1,6 @@
 .banner{
     width: 100%;
-    height: 25px;
+    height: 30px;
     background-color: #fff;
     text-align: center;
     border-bottom: 1px solid #dedede;
@@ -22,7 +22,7 @@ header {
     // border-top: 1px solid transparent;
     transition: all .5s ease;
     .header-interior {
-        padding: 0rem 1rem;
+        // padding: 0rem 1rem;
         width: var(--header-width);
         height: 100%;
         display: flex;
@@ -32,9 +32,9 @@ header {
         z-index: 3;
 
         figure {
-            position: absolute;
-            left: 50%;
-            transform: translateX(-50%);
+            // position: absolute;
+            // left: 50%;
+            // transform: translateX(-50%);
             color: var(--header-color);
         }
 
