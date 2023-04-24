@@ -51,7 +51,7 @@ export default function App() {
   const prod = data.query.products.edges[0].node;
   const metaobjects = data.query.metaobjects.edges[0].node.text.line;
   // .edges[0].node.fields[0].value;`
-  console.log('metaobjects: ', metaobjects);
+  // console.log('metaobjects: ', metaobjects);
 
   return (
     <html lang="en">

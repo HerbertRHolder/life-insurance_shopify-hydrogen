@@ -17,7 +17,9 @@ export default function HeroSection(child1 = null, child2) {
             No medical exams, no blood tests Contact us to get covered today.
           </p>
           <div className="btn-container gap-5 text-margin text-margin-top position-relative">
-            <button>About</button>
+            <button className="btn btn-bg border opensans-font fw-light text-white">
+              Ours Agents
+            </button>
             <GetNowBtn></GetNowBtn>
             {/* <p>{data.id}</p> */}
           </div>

@@ -19,6 +19,10 @@
   background-color: #FA640A;
 }
 
+.btn-bg:hover {
+  background-color: #f97626;
+}
+
 .cinzel-font {
   font-family: "Cinzel", serif;
 }
@@ -470,6 +474,18 @@ main {
   display: flex;
 }
 
+@media screen and (max-width: 576px) {
+  .form-box {
+    width: 98%;
+    height: 472px;
+  }
+  .btn {
+    padding: 0.5rem 1rem !important;
+  }
+  .align-container .sub-title {
+    width: 90%;
+  }
+}
 @media screen and (max-width: 992px) {
   .text-margin {
     margin-left: 0;
@@ -514,7 +530,7 @@ main {
   }
   .align-container .sub-title {
     text-align: start;
-    width: 50% !important;
+    width: 50%;
   }
 }
 /* typography

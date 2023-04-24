@@ -7,10 +7,16 @@
 
 // Extra Small
 @media screen and (max-width:576px) {
-   
-  
-
-
+    .form-box {
+        width: 98%;
+        height: 472px;
+    }
+    .btn {
+        padding: .5rem 1rem !important;
+    }
+    .align-container .sub-title {
+        width: 90%;
+    }
 
 } // Extra Small end
 
@@ -83,7 +89,7 @@
         align-items: flex-start;
         .sub-title {
             text-align: start;
-            width: 50% !important; ;
+            width: 50%; ;
         }
 
     }
