@@ -1,10 +1,8 @@
 export default function Header({ShopName}) {
   return (
     <>
-      <div className="banner">
-        An Evening at the Hollwood Bowl. Discover More
-      </div>
-      <header className="">
+      <div className="banner opensans-font">Get a Discount Quote</div>
+      <header className="opensans-font">
         <div className="header-interior ">
           <figure className="cinzel-font text-margin">{ShopName}</figure>
           <nav className="half center ">

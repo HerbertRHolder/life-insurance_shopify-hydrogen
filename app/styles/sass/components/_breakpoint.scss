@@ -5,55 +5,114 @@
 // Extra 	    ≥1200px
 // Extra	    ≥1400px
 
-@media screen and (max-width:576px) {}
+// Extra Small
+@media screen and (max-width:576px) {
+   
+  
+
+
+
+} // Extra Small end
 
 @media screen and (min-width:576px) {}
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 768px) {}
 
-    .full-section {
-        flex-direction: column;
+@media screen and (max-width: 992px) {
 
-        .half-section {
-            width: 100%;
 
-            .btn-container {
-                margin-top: 3rem;
+
+// +++++++++ Hero extra small ++++++++++++++++++++++++++++++
+.text-margin {
+    margin-left: 0;
+    text-align: center;
+}
+.full-section {
+    flex-direction: column;
+
+    .half-section {
+        width: 100%;
+
+        .btn-container {
+            margin-top: 3rem;
+        }
+        .align-container{
+            align-items: center !important;
+            .sub-title {
+                text-align: center;
             }
+    
         }
     }
+}
+.center-md {
+    justify-content: start;
+    padding-top: 2rem;
+    align-items: center !important;
+}
+.btn-container {
+    justify-content: center;
+}
+.align-container {
 
-    .center-md {
-        justify-content: start;
-        padding-top: 2rem;
-        align-items: center !important;
+    h1 {
+        .text-margin{
+            margin-left: 0;
+        }
     }
-
-    .text-margin {
-        margin-left: 0;
-        text-align: center;
-    }
-
     .btn-container {
-        justify-content: center;
+        .text-margin{
+            margin-left: 0;
+        }
     }
+}
+// +++++++++++++++++++++++++++++++++++++++
 
     header .header-interior nav {
         display: none !important;
     }
 }
 
+
+@media screen and (max-width: 1200px) {
+  
+}
+
+@media screen and (max-width: 1369px) {
+    .align-container{
+        align-items: flex-start;
+        .sub-title {
+            text-align: start;
+        }
+
+    }
+}
+
+/* typography
+1400 title font 
+fs-1 {
+    font-size: 3rem !important;
+}
+
+*/
+
+
+
+
+
+
+
+
+
+/*
 @media screen and (max-width: 992px) {
     .text-margin {
         margin-left: 2rem;
     }
 }
 
-@media screen and (max-width: 1000px) {
-    .text-margin {
-        margin-left: 0.3rem !important;
-    }
-}
+
+
 
 @media screen and (max-width: 1200px) {
     .info-column {
@@ -65,4 +124,22 @@
     }
 }
 
-@media screen and (max-width: 1400px) {}
+
+
+
+
+
+  .text-margin {
+        margin-left: 0.3rem !important;
+    }
+
+   
+
+   
+
+    
+   
+
+   
+
+*/

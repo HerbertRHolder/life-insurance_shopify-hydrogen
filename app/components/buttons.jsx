@@ -1,7 +1,7 @@
 export default function GetNowBtn() {
   return (
     <button className="cta">
-      <span className="hover-underline-animation"> Get a Quote </span>
+      <span className="hover-underline-animation"> Contact Us </span>
       <svg
         viewBox="0 0 46 16"
         height="10"

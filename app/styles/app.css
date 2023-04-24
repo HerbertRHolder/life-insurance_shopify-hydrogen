@@ -11,6 +11,14 @@
   background-color: #DBEDE5;
 }
 
+.sub-bg {
+  background-color: #dedede;
+}
+
+.btn-bg {
+  background-color: #FA640A;
+}
+
 .cinzel-font {
   font-family: "Cinzel", serif;
 }
@@ -19,7 +27,7 @@
   font-family: "Open Sans", sans-serif;
 }
 
-.small-font {
+.sub-title {
   font-size: 1.25rem !important;
 }
 
@@ -28,7 +36,7 @@
 }
 
 .text-margin {
-  margin-left: 7rem;
+  margin-left: 3rem;
 }
 
 .text-margin-right {
@@ -36,7 +44,7 @@
 }
 
 .text-margin-top {
-  margin-top: 7rem;
+  margin-top: 5rem;
 }
 
 .half {
@@ -60,21 +68,6 @@
   margin-left: 7rem;
 }
 
-.form-control {
-  border: none !important;
-  border-bottom: 1px solid #dedede !important;
-  border-radius: 0rem !important;
-}
-
-.form-control:focus {
-  color: var(--bs-body-color);
-  background-color: var(--bs-body-bg);
-  border-color: transparent !important;
-  outline: 0;
-  box-shadow: none !important;
-  border-bottom: 1px solid #dedede !important;
-}
-
 /*
 * Prefixed by https://autoprefixer.github.io
 * PostCSS: v8.4.14,
@@ -82,11 +75,14 @@
 * Browsers: last 4 version
 */
 .form-box {
-  max-width: 300px;
+  max-width: 430px;
+  height: 472px;
   background: #f1f7fe;
+  border: 1px solid #c7c5c5;
   overflow: hidden;
   border-radius: 16px;
   color: #010101;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
 }
 
 .form {
@@ -106,7 +102,7 @@
 /*Form text*/
 .title {
   font-weight: bold;
-  font-size: 1.6rem;
+  font-size: 1.2rem;
 }
 
 .subtitle {
@@ -116,22 +112,28 @@
 
 /*Inputs box*/
 .form-container {
-  overflow: hidden;
-  border-radius: 8px;
-  background-color: #fff;
   margin: 1rem 0 0.5rem;
   width: 100%;
+  display: flex;
+  justify-content: center;
+  /* Chrome, Safari, Edge, Opera */
 }
-
-.input {
-  background: none;
-  border: 0;
-  outline: 0;
-  height: 40px;
-  width: 100%;
-  border-bottom: 1px solid #eee;
-  font-size: 0.9rem;
-  padding: 8px 15px;
+.form-container input::-webkit-outer-spin-button,
+.form-container input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+.form-container input[type=number],
+.form-container input[type=number]:focus {
+  -moz-appearance: textfield;
+  border: none;
+  outline: none;
+  cursor: text;
+}
+.form-container button {
+  border: none;
+  border-radius: 0% !important;
+  border-radius: none !important;
 }
 
 .form-section {
@@ -155,23 +157,67 @@
   text-decoration: underline;
 }
 
-/*Button*/
-.form button {
-  background-color: #0066ff;
+/*input*/
+label {
+  position: relative;
+  transition: all 0.4s ease;
+}
+
+.form-container div input[type=text] {
+  cursor: text;
+}
+.form-container div input[type=radio] {
+  opacity: 1000;
+  position: absolute;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  width: 100%;
+  height: 100%;
+  left: 50%;
+  transform: translate(-50%);
+  font-weight: 200;
+}
+.form-container .radio-wrapper input[type=radio]:checked {
+  opacity: 100;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 50%;
+  transform: translate(-50%);
+  background-color: #005ce6;
+  color: #ffffff;
+}
+.form-container .radio-wrapper input[type=radio]#male::before {
+  content: "Male";
+  display: inline-block;
+}
+.form-container .radio-wrapper input[type=radio]#female::after {
+  content: "Female";
+  display: inline-block;
+}
+.form-container .radio-wrapper input[type=radio]:checked + div > label {
+  background-color: #010101;
+}
+.form-container .radio-wrapper input[type=radio]:focus + div > label {
+  background-color: #010101;
+}
+
+.form button[type=submit] {
   color: #fff;
   border: 0;
-  border-radius: 24px;
   padding: 10px 16px;
   font-size: 1rem;
   font-weight: 600;
+  background-color: #f67626;
   cursor: pointer;
   -webkit-transition: background-color 0.3s ease;
   -o-transition: background-color 0.3s ease;
   transition: background-color 0.3s ease;
 }
 
-.form button:hover {
-  background-color: #005ce6;
+.form button[type=submit]:hover {
+  background-color: #f58540;
 }
 
 body {
@@ -351,6 +397,14 @@ header .header-interior menu .streak {
   min-height: 550px;
   display: flex;
 }
+.full-section .img-fluid {
+  z-index: 1;
+  top: 100%;
+  transform: translateY(-100%);
+}
+.full-section .img-fluid.img-width {
+  width: 20%;
+}
 
 main {
   justify-content: start !important;
@@ -364,6 +418,7 @@ main {
   flex-direction: column;
   justify-content: start;
   align-items: center;
+  z-index: 3;
 }
 
 .half-section {
@@ -410,7 +465,11 @@ main {
   display: flex;
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 992px) {
+  .text-margin {
+    margin-left: 0;
+    text-align: center;
+  }
   .full-section {
     flex-direction: column;
   }
@@ -420,40 +479,84 @@ main {
   .full-section .half-section .btn-container {
     margin-top: 3rem;
   }
+  .full-section .half-section .align-container {
+    align-items: center !important;
+  }
+  .full-section .half-section .align-container .sub-title {
+    text-align: center;
+  }
   .center-md {
     justify-content: start;
     padding-top: 2rem;
     align-items: center !important;
   }
-  .text-margin {
-    margin-left: 0;
-    text-align: center;
-  }
   .btn-container {
     justify-content: center;
+  }
+  .align-container h1 .text-margin {
+    margin-left: 0;
+  }
+  .align-container .btn-container .text-margin {
+    margin-left: 0;
   }
   header .header-interior nav {
     display: none !important;
   }
 }
+@media screen and (max-width: 1369px) {
+  .align-container {
+    align-items: flex-start;
+  }
+  .align-container .sub-title {
+    text-align: start;
+  }
+}
+/* typography
+1400 title font 
+fs-1 {
+    font-size: 3rem !important;
+}
+
+*/
+/*
 @media screen and (max-width: 992px) {
-  .text-margin {
-    margin-left: 2rem;
-  }
+    .text-margin {
+        margin-left: 2rem;
+    }
 }
-@media screen and (max-width: 1000px) {
-  .text-margin {
-    margin-left: 0.3rem !important;
-  }
-}
+
+
+
+
 @media screen and (max-width: 1200px) {
-  .info-column {
-    width: 90%;
-  }
-  .text-margin {
-    margin-left: 3rem;
-  }
+    .info-column {
+        width: 90%;
+    }
+
+    .text-margin {
+        margin-left: 3rem;
+    }
 }
+
+
+
+
+
+
+  .text-margin {
+        margin-left: 0.3rem !important;
+    }
+
+
+
+
+
+
+
+
+
+
+*/
 .dol {
   outline: dashed red 1px;
 }

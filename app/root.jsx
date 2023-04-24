@@ -41,14 +41,16 @@ export const meta = () => ({
 });
 
 export async function loader({context}) {
-  const layout = await context.storefront.query(LAYOUT_QUERY);
-  return {layout};
+  const query = await context.storefront.query(QUERY);
+  return {query};
 }
 
 export default function App() {
   const data = useLoaderData();
-
-  const {name} = data.layout.shop;
+  // .productConnection.productEdge[0].product.id;
+  const {name} = data.query.shop;
+  const prod = data.query.products.edges[0].node;
+  // console.log('product:', prod);
 
   return (
     <html lang="en">
@@ -61,7 +63,7 @@ export default function App() {
         <Header ShopName={name}></Header>
         <main className="">
           <Hero>
-            <TwoColumnSection></TwoColumnSection>
+            <TwoColumnSection product={prod}></TwoColumnSection>
           </Hero>
         </main>
         <ScrollRestoration />
@@ -72,11 +74,24 @@ export default function App() {
   );
 }
 
-const LAYOUT_QUERY = `#graphql
-  query layout {
-    shop {
-      name
-      description
+const QUERY = `#graphql
+{
+  shop {
+    name
+  }
+  products(first: 1, reverse: true) {
+    edges {
+      node {
+        id
+        description
+        featuredImage {
+          id
+          url
+          width
+          height
+        }
+      }
     }
   }
+}
 `;

@@ -3,6 +3,14 @@
     width: 100%;
     min-height: 550px;
     display: flex;
+    .img-fluid {
+        z-index: 1;
+        top: 100%;
+        transform: translateY(-100%);
+    }
+    .img-fluid.img-width {
+       width: 20%;
+    }
 }
 main {
     justify-content: start !important;
@@ -15,6 +23,7 @@ main {
     flex-direction: column;
     justify-content: start;
     align-items: center;
+    z-index: 3;
 }
 .half-section {
     justify-content: start;
