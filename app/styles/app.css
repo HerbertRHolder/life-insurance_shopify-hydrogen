@@ -323,6 +323,11 @@ header .header-interior menu .streak {
   box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
 }
 
+.card-info {
+  width: 70%;
+  height: 500px;
+}
+
 .cta {
   border: none;
   background: none;
@@ -509,6 +514,7 @@ main {
   }
   .align-container .sub-title {
     text-align: start;
+    width: 50% !important;
   }
 }
 /* typography

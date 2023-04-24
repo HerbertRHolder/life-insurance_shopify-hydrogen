@@ -5,12 +5,11 @@ import {
   ScrollRestoration,
   useLoaderData,
 } from '@remix-run/react';
-import {Seo} from '@shopify/hydrogen';
+import {Seo, Image} from '@shopify/hydrogen';
+import Section from './components/Section';
 import Header from './components/Header';
-// import EmailForm from './components/form';
-// import {CardColumn} from './components/cards';
 import Hero from './components/Hero';
-import TwoColumnSection from './components/TwoColumnSection';
+import HeroSection from './components/HeroSection';
 import Footer from './components/footer';
 
 import reset from './styles/reset.css';
@@ -50,7 +49,9 @@ export default function App() {
   // .productConnection.productEdge[0].product.id;
   const {name} = data.query.shop;
   const prod = data.query.products.edges[0].node;
-  // console.log('product:', prod);
+  const metaobjects = data.query.metaobjects.edges[0].node.text.line;
+  // .edges[0].node.fields[0].value;`
+  console.log('metaobjects: ', metaobjects);
 
   return (
     <html lang="en">
@@ -63,8 +64,25 @@ export default function App() {
         <Header ShopName={name}></Header>
         <main className="">
           <Hero>
-            <TwoColumnSection product={prod}></TwoColumnSection>
+            <HeroSection>
+              <Image
+                alt={`${prod.description}`}
+                data={prod.featuredImage}
+                key={prod.id}
+                // width={200}
+                className="img-fluid img-width position-absolute"
+              />
+            </HeroSection>
           </Hero>
+          <Section>
+            <Image
+              alt={`${prod.description}`}
+              data={prod.featuredImage}
+              key={prod.id}
+              // width={200}
+              className="img-fluid img-width position-absolute"
+            />
+          </Section>
         </main>
         <ScrollRestoration />
         <Footer ShopName={name} />
@@ -90,6 +108,19 @@ const QUERY = `#graphql
           width
           height
         }
+      }
+    }
+  }
+  metaobjects (type: "website_details", first: 3) {
+    edges {
+      node {
+        id
+        title: field (key: "title") {
+          name: value
+        }
+        text: field (key: "landing_page") {
+            line: value
+          }
       }
     }
   }
