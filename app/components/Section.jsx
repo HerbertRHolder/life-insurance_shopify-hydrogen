@@ -10,17 +10,17 @@ export default function Section({QUERY}) {
   const textDesc = QUERY.metaobjects.edges[0].node.text.line;
   return (
     <>
-      <section className="full-section dol center">
-        <div className="half-section dol center info-column">
+      <section className="full-section  center">
+        <div className="half-section  center info-column">
           <CardInfo title={title} info={textDesc} />
         </div>
-        <div className="half-section center">
+        <div className="half-section center align-items-center ">
           <Image
             alt={prod.description}
             data={img}
             key={prod.id}
-            // width={200}
-            className="img-fluid img-width position-absolute"
+            width={600}
+            className=""
           />
         </div>
       </section>
