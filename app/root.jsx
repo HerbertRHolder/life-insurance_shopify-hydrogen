@@ -47,11 +47,13 @@ export async function loader({context}) {
 export default function App() {
   const data = useLoaderData();
   // .productConnection.productEdge[0].product.id;
+  const rootQuery = data.query;
   const {name} = data.query.shop;
   const prod = data.query.products.edges[0].node;
-  const metaobjects = data.query.metaobjects.edges[0].node.text.line;
+  const title = data.query.metaobjects.edges[0].node.title.name;
+  const textDesc = data.query.metaobjects.edges[0].node.text.line;
   // .edges[0].node.fields[0].value;`
-  // console.log('metaobjects: ', metaobjects);
+  console.log('metaobjects: ', rootQuery.metaobjects.edges[0].node.text.line);
 
   return (
     <html lang="en">
@@ -74,15 +76,7 @@ export default function App() {
               />
             </HeroSection>
           </Hero>
-          <Section>
-            <Image
-              alt={`${prod.description}`}
-              data={prod.featuredImage}
-              key={prod.id}
-              // width={200}
-              className="img-fluid img-width position-absolute"
-            />
-          </Section>
+          <Section QUERY={rootQuery}></Section>
         </main>
         <ScrollRestoration />
         <Footer ShopName={name} />
@@ -121,6 +115,15 @@ const QUERY = `#graphql
         text: field (key: "landing_page") {
             line: value
           }
+        img: field (key: "info_image"){
+          reference {
+            ...on MediaImage {
+              image {
+                url
+              }
+            }
+          }      
+        }
       }
     }
   }

@@ -4,12 +4,12 @@ export default function Header({ShopName}) {
       <div className="banner opensans-font">Get a Discount Quote</div>
       <header className="opensans-font">
         <div className="header-interior ">
-          <figure className="cinzel-font text-margin">{ShopName}</figure>
+          <figure className="opensans-font fw-bolder text-margin">{ShopName}</figure>
           <nav className="half center ">
             <ul className="half center navigate-styling ">
               <li>Insurance</li>
               <li>Agents</li>
-              <li>Why Lumnimous</li>
+              <li>Why {ShopName}</li>
             </ul>
           </nav>
 

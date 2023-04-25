@@ -40,7 +40,7 @@ export default function EmailForm() {
             </label>
             <input
               type="text"
-              pattern="[0-9]{3}"
+              pattern="[0-9]{1-3}"
               name="age"
               id="age"
               className="btn w-100 sub-bg"
