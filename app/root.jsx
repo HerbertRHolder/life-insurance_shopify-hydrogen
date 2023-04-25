@@ -50,10 +50,7 @@ export default function App() {
   const rootQuery = data.query;
   const {name} = data.query.shop;
   const prod = data.query.products.edges[0].node;
-  const title = data.query.metaobjects.edges[0].node.title.name;
-  const textDesc = data.query.metaobjects.edges[0].node.text.line;
-  // .edges[0].node.fields[0].value;`
-  console.log('metaobjects: ', rootQuery.metaobjects.edges[0].node.text.line);
+  // console.log('metaobjects: ', rootQuery.metaobjects.edges[0].node.text.line);
 
   return (
     <html lang="en">
